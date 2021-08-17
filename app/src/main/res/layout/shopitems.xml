@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/shoplayout"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:background="@drawable/secondbox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ImageView
+        android:background="@drawable/boxcorner"
+        android:src="@drawable/unnamed"
+        android:id="@+id/items"
+        android:layout_width="160dp"
+        android:layout_height="160dp"/>
+
+    <TextView
+        android:id="@+id/itemtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="22dp" />
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="15dp"
+            android:text="Price="
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/price7"
+            android:textSize="15dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
+

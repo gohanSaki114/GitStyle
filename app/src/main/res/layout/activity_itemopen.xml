@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".itemopen">
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:id="@+id/giantimage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:elevation="5dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/heartlayer"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/picitems"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/giantimage"
+            android:layout_width="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/picitems"
+            app:layout_constraintStart_toEndOf="@+id/card"
+            android:layout_width="wrap_content"
+            android:id="@+id/spinner5"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="170dp"
+            app:layout_constraintBottom_toTopOf="@id/textitems"
+            app:layout_constraintEnd_toStartOf="@id/spinner4"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/spinner4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/picitems"
+            app:layout_constraintBottom_toTopOf="@id/textitems"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="9dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/less1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="9dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="14dp"
+                    android:layout_margin="4dp"
+                    android:src="@drawable/ic_baseline_minimize_24" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/prnumber3"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="number"
+                android:padding="5dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/more1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+
+                app:cardCornerRadius="5dp"
+                app:cardElevation="9dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="4dp"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_margin="22dp"
+            android:id="@+id/textitems"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Plain white T-Shirt (Round necked)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textitems2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Extra $91 discount"
+            android:textColor="#CA153E"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textitems" />
+
+        <TextView
+            android:layout_margin="22dp"
+            android:text="$109"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:id="@+id/textitems3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textitems2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:drawableLeft="@drawable/ic_baseline_collections_bookmark_24"
+            android:layout_margin="22dp"
+            android:text="   5% Unlimited CashBack on Style Klub Axis Bank Credit"
+            android:id="@+id/textitems4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textitems3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:drawableLeft="@drawable/ic_baseline_collections_bookmark_24"
+            android:layout_margin="22dp"
+            android:text="   5% CashBack * on HDFC Bank Debit Cards"
+            android:id="@+id/textitems5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textitems4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:drawableLeft="@drawable/ic_baseline_collections_bookmark_24"
+            android:layout_margin="22dp"
+            android:text="   5% Unlimited CashBack on Style Klub Axis Bank Credit"
+            android:id="@+id/textitems6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textitems5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textitems6"
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content">
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/details"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Product Details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/details"
+                android:id="@+id/sleevelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sleeve"
+                    android:text="Sleeve"
+                    />
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/sleeve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ans"
+                    android:text="Full Sleeve"
+
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:layout_weight="1"
+                android:id="@+id/Addtocart"
+                android:textColor="#190F0F"
+                android:backgroundTint="#A4FBCBCB"
+                android:text="ADD TO CART"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_weight="1"
+                android:id="@+id/Buynow"
+                android:backgroundTint="#27686E"
+                android:text="BUY NOW"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
